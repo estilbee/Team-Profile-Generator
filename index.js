@@ -39,7 +39,7 @@ const getManager = () => {
         ----------------------
         `)
         return menu()
-
+})
 }
 
 const getEngineer = () => {
