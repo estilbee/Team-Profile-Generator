@@ -5,7 +5,7 @@ const Intern = require('./lib/intern');
 const Manager = require('./lib/manager');
 const fs = require('fs');
 
-
+const employeeList = [];
 
 const getManager = () => {
     return inquirer.prompt([
@@ -30,9 +30,17 @@ const getManager = () => {
             name: "officeNumber"
         }
     ])
+    .then(answers => {
+        console.log(answers)
+        const {name, id, email, officeNumber} = answers
+        employeeList.push(new Manager(name, id, email, officeNumber))
+        console.log(employeeList)
+        console.log(`
+        ----------------------
+        `)
+        return menu()
 
 }
-getManager();
 
 const getEngineer = () => {
     return inquirer.prompt([
@@ -54,9 +62,20 @@ const getEngineer = () => {
         {
             type: "input",
             message: "What is the engineer's GitHub name?",
-            name: "GitHub"
+            name: "gitHub"
         }
     ])
+   .then(answers => {
+    console.log(answers)
+    const {name, id, email, gitHub} = answers
+    employeeList.push(new Engineer(name, id, email, gitHub))
+    console.log(employeeList)
+    console.log(`
+    ----------------------
+    `)
+    return menu()
+    
+})
 }
 
 const endProgram = () => {
@@ -69,12 +88,14 @@ function menu(){
         {
             type: "list",
             message: "Choose an option: ",
-            choices: ["Add an engineer", "Add an intern", "Exit"],
-            name: "menu"
+            choices: ["Add a manager", "Add an engineer", "Add an intern", "Exit"],
+            name: "menuOption"
         }
     ])
-    .then( ({option}) => {
-        switch(option){
+    .then( ({menuOption}) => {
+        switch(menuOption){
+            case "Add a manager":
+                return getManager();
             case "Add an engineer":
                 return getEngineer();
             case "Add an intern":
