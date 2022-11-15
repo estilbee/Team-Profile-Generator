@@ -15,3 +15,15 @@ describe("Role test", () => {
       });
     });
   });
+
+  test("Can set GitHub name via constructor arguments", () => {
+    const testValue = "Estilbee";
+    const e = new Employee(testValue);
+    expect(e.getGithub()).toBe(testValue);
+  });
+
+  test("Can set GitHub name via constructor arguments", () => {
+    const testValue = "Estilbee";
+    const e = new Employee(testValue);
+    expect(e.gitHub).toBe(testValue);
+  });

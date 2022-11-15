@@ -15,3 +15,15 @@ describe("Role test", () => {
       });
     });
   });
+
+  test("Can set school name via constructor arguments", () => {
+    const testValue = "USC";
+    const e = new Employee(testValue);
+    expect(e.getSchool()).toBe(testValue);
+  });
+
+  test("Can set school name via constructor arguments", () => {
+    const testValue = "USC";
+    const e = new Employee(testValue);
+    expect(e.school).toBe(testValue);
+  });

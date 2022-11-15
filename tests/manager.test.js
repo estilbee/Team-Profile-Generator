@@ -15,3 +15,15 @@ describe("Role test", () => {
       });
     });
   });
+
+  test("Can set Office Number name via constructor arguments", () => {
+    const testValue = "25";
+    const e = new Employee(testValue);
+    expect(e.getOfficeNumber()).toBe(testValue);
+  });
+
+  test("Can set GitHub name via constructor arguments", () => {
+    const testValue = "25";
+    const e = new Employee(testValue);
+    expect(e.officeNumber).toBe(testValue);
+  });
