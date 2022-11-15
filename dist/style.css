@@ -1,0 +1,16 @@
+
+h2 {
+    font-weight: bold;
+    color: lightcoral;
+    text-align: center;
+    
+}
+.card {
+    display: flex;
+    justify-items: center;
+}
+
+
+.card-body {
+    background-color: lightcoral;
+}
