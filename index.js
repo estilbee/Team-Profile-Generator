@@ -4,6 +4,7 @@ const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 const Manager = require('./lib/manager');
 const fs = require('fs');
+const generateHTML = require('./src/generatehtml')
 
 const employeeList = [];
 
@@ -106,6 +107,11 @@ const getIntern = () => {
 })
 }
 
+const writeHTML = () => {
+    fs.writeFileSync("./dist/index.html", generateHTML(employeeList))
+}
+
+
 const endProgram = () => {
     console.log("Exiting program.")
     return;
@@ -129,7 +135,7 @@ function menu(){
             case "Add an intern":
                 return getIntern();
             case "Exit":
-                return endProgram();       
+                return writeHTML();       
         }
     })
 }
