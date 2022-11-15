@@ -18,12 +18,12 @@ describe("Role test", () => {
 
   test("Can set school name via constructor arguments", () => {
     const testValue = "USC";
-    const e = new Employee(testValue);
-    expect(e.getSchool()).toBe(testValue);
+    const e = new Intern(testValue);
+    expect(e.getSchool()).toEqual(testValue);
   });
 
   test("Can set school name via constructor arguments", () => {
     const testValue = "USC";
-    const e = new Employee(testValue);
-    expect(e.school).toBe(testValue);
+    const e = new Intern(testValue);
+    expect(e.school).toEqual(testValue);
   });
