@@ -18,15 +18,14 @@ describe("Role test", () => {
 
 
 
-
   test("Can set GitHub name via constructor arguments", () => {
     const testValue = "Estilbee";
-    const e = new Engineer(testValue);
+    const e = new Engineer("", 0, "a@b.c", testValue);
     expect(e.getGithub()).toEqual(testValue);
   });
 
   test("Can set GitHub name via constructor arguments", () => {
     const testValue = "Estilbee";
-    const e = new Engineer(testValue);
+    const e = new Engineer("", 0, "a@b.c", testValue);
     expect(e.gitHub).toEqual(testValue);
   });

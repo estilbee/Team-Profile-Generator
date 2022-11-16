@@ -18,12 +18,12 @@ describe("Role test", () => {
 
   test("Can set Office Number name via constructor arguments", () => {
     const testValue = "25";
-    const e = new Manager(testValue);
+    const e = new Manager("", 0, "a@b.c", testValue);
     expect(e.getOfficeNumber()).toEqual(testValue);
   });
 
   test("Can set GitHub name via constructor arguments", () => {
     const testValue = "25";
-    const e = new Manager(testValue);
+    const e = new Manager("", 0, "a@b.c", testValue);
     expect(e.officeNumber).toEqual(testValue);
   });

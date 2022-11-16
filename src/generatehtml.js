@@ -66,7 +66,9 @@ module.exports = employeeList => {
 </head>
 <body>
 <h2>Your Team </h2>
+<main>
     ${generateHTML(employeeList)}
+</main>
 </body>
 </html>
     `

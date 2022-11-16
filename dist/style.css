@@ -3,11 +3,17 @@ h2 {
     font-weight: bold;
     color: rgb(141, 167, 99);
     text-align: center;
+    background-color: lightblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
 }
-.card {
+main {
     display: flex;
-    justify-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 30 px;
 }
 
 
