@@ -1,7 +1,7 @@
 
 h2 {
     font-weight: bold;
-    color: lightcoral;
+    color: rgb(141, 167, 99);
     text-align: center;
     
 }
@@ -12,5 +12,5 @@ h2 {
 
 
 .card-body {
-    background-color: lightcoral;
+    background-color: rgb(141, 167, 99);
 }
